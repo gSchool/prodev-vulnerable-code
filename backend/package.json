@@ -1,0 +1,32 @@
+{
+  "name": "prodev-vulnerable-code-backend",
+  "version": "1.0.0",
+  "description": "A repository that contains a lot of vulnerable code.",
+  "main": "src/server.mjs",
+  "scripts": {
+    "dev": "nodemon src/server.mjs",
+    "migrate": "db-migrate",
+    "start": "node src/server.mjs"
+  },
+  "keywords": [
+    "security"
+  ],
+  "author": "Professional Development <profdev@galvanize.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
+    "bcryptjs": "^2.4.3",
+    "db-migrate": "^0.11.12",
+    "db-migrate-pg": "^1.2.2",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "node-input-validator": "^4.3.3",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
