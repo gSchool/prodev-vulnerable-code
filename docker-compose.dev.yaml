@@ -1,0 +1,69 @@
+version: "3.8"
+services:
+  # Infrastructure
+  ingress:
+    image: nginx:1.19-alpine
+    depends_on:
+      - backend
+      - frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./ingress.conf:/etc/nginx/templates/default.conf.template:ro
+
+  # Persistent stores
+  postgres:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: prodev_vulnerable
+      POSTGRES_PASSWORD: q983204qrjrpq9348
+      POSTGRES_USER: prodev_vulnerable_user
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./data/psql:/var/lib/postgresql/data  
+  mongo:
+    image: mongo:4-bionic
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 03485rtp9qw2854tuajs
+      MONGO_INITDB_DATABASE: prodev_vulnerable
+    volumes:
+      - ./data/mongo:/data/db
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  # Application services
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile.dev
+    depends_on: 
+      - mongo
+      - postgres
+    environment:
+      WAIT_HOSTS: postgres:5432, mongo:27017
+      # For more information on the following variables,
+      # please refer to ./backend/template.env.
+      JWT_SECRET: 0q394j5rpq8ja29384pq9
+      MONGO_URL: mongodb://prodev_vulnerable_user:209384j490q3ptaosdjf@mongo/prodev_vulnerable?appName=Vulnerable+Backend
+      NODE_ENV: development
+      PGAPPNAME: Vulnerable Backend
+      PGDATABASE: prodev_vulnerable
+      PGHOST: postgres
+      PGPASSWORD: q983204qrjrpq9348
+      PGPORT: 5432
+      PGUSER: prodev_vulnerable_user
+      PORT: 8000
+    volumes:
+      - ./backend/database.json:/usr/src/app/database.json
+      - ./backend/migrations:/usr/src/app/migrations
+      - ./backend/src:/usr/src/app/src
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./frontend/public:/usr/src/app/public
+      - ./frontend/src:/usr/src/app/src

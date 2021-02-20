@@ -19,10 +19,20 @@ application locally without virtualization.
 
 ## Running the application with Docker
 
+The following two commands run "development" versions of the applications such
+that you can change code and it should be immediately updated for your
+environment.
+
 ```sh
-# Run this if you change code or for the first time
-docker-compose build
+# Run this if you change the Dockerfile or for the first time
+docker-compose -f docker-compose.dev.yaml build
 
 # Run this when you want to start the apps
-docker-compose up
+docker-compose -f docker-compose.dev.yaml up
 ```
+
+**Note**: Because this is a local Docker development environment, passwords are
+included in the **docker-compose.dev.yaml** and **mongo-init.js**.
+
+When deploying your apps in the real world, **_DO NOT PUT CREDENTIALS IN
+CONFIGURATION FILES STORED IN A SOURCE CODE VERSION CONTROL SYSTEM_**.
