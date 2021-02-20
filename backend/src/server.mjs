@@ -3,7 +3,7 @@ import cors from '@koa/cors';
 import dotenv from 'dotenv';
 import Koa from 'koa';
 import niv from 'node-input-validator';
-// import { router } from './routes/index.mjs';
+import { router } from './routes/index.mjs';
 import { bearer } from './security.mjs';
 
 dotenv.config();
@@ -24,6 +24,6 @@ app.use(bearer);
 
 app.use(bodyParser({ multipart: true }));
 
-// app.use(router.routes());
+app.use(router.routes());
 
 app.listen(port, () => console.log(`⚙ Accepting connections on ${port}`));

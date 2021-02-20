@@ -23,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
+    "mongoose": "^5.11.17",
     "node-input-validator": "^4.3.3",
     "pg": "^8.5.1"
   },
