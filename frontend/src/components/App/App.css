@@ -1,0 +1,70 @@
+.App {
+  display: flex;
+  flex-direction: column;  
+}
+
+.App-content {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.App-logo {
+  pointer-events: none;
+  width: 188px;
+}
+
+.App-header {
+  background-color: #EEEEEE;
+  border-bottom: 1px solid #E0E0E0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.App-main {
+  margin: 80px auto 0 auto;
+}
+
+@media (min-width: 700px) {
+  .App-content {
+    margin-top: 0;
+    padding: 0 0 0 1rem;
+  }
+  .App-content > h1:first-child {
+    margin-top: 0;
+  }
+  .App-header {
+    flex-direction: row;
+  }
+  .App-logo {
+    margin-right: 2rem;
+  }
+  .App-main {
+    display: flex;
+    width: 640px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .App-content {
+    padding: 0 0 0 2rem;
+  }
+  .App-main {
+    display: flex;
+    width: 900px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .App-main {
+    display: flex;
+    width: 1300px;
+  }
+}

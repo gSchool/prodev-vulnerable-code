@@ -9,7 +9,7 @@ App](https://github.com/facebook/create-react-app). It uses the following
 additional libraries and frameworks:
 
 * [React Router DOM](https://reactrouter.com/web)
-* [Skeleton CSS](http://getskeleton.com/)
+* [Fluidtype](https://www.fluiditype.com/)
 
 ## Create React App documentation
 
