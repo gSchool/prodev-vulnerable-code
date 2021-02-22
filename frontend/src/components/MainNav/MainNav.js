@@ -28,7 +28,7 @@ const MainNav = () => {
           Hack tables in a database.
         </dd>
         <dt className="MainNav-list-item">
-          <NavLink className="MainNav-link" to="/sql-injection">NoSQL Injection</NavLink>
+          <NavLink className="MainNav-link" to="/nosql-injection">NoSQL Injection</NavLink>
         </dt>
         <dd className="MainNav-list-item-description">
           Mess with Mongo queries.
@@ -46,7 +46,7 @@ const MainNav = () => {
           Get other people's information.
         </dd>
         <dt className="MainNav-list-item">
-          <NavLink className="MainNav-link" to="/stored-xss">CSS Injection</NavLink>
+          <NavLink className="MainNav-link" to="/css-injection">CSS Injection</NavLink>
         </dt>
         <dd className="MainNav-list-item-description">
           CSS can still be dangerous!
