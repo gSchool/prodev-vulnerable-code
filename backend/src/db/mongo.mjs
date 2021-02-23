@@ -14,7 +14,8 @@ export const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
 const PersonSchema = new mongoose.Schema({
-  name: String,
+  username: String,
+  password: String,
 });
 
 export const Person = mongoose.model('Person', PersonSchema);

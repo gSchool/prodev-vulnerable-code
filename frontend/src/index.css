@@ -12,3 +12,11 @@ body {
   font-weight: 700;
   padding: 1rem;
 }
+
+.success {
+  box-sizing: border-box;
+  background-color: #69F0AE;
+  border-radius: 4px;
+  font-weight: 700;
+  padding: 1rem;
+}

@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Description from '../Description/Description';
 import MainNav from '../MainNav/MainNav';
+import NoSqlInjection from '../NoSqlInjection/NoSqlInjection';
 import SqlInjection from '../SqlInjection/SqlInjection';
 
 import logo from '../../combined-logos.png';
@@ -20,6 +21,7 @@ function App() {
           <div className="App-content">
             <Switch>
               <Route path="/sql-injection" component={SqlInjection} />
+              <Route path="/nosql-injection" component={NoSqlInjection} />
               <Route component={Description} />
             </Switch>
           </div>
