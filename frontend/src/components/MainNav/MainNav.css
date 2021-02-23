@@ -73,6 +73,7 @@
 
 @media (min-width: 700px) {
   .MainNav {
+    flex: 0 0 200px;
     position: static;
     left: auto;
     margin-top: 0;

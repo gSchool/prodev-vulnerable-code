@@ -3,3 +3,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.error {
+  box-sizing: border-box;
+  background-color: tomato;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+}

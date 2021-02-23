@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Description from '../Description/Description';
 import MainNav from '../MainNav/MainNav';
+import SqlInjection from '../SqlInjection/SqlInjection';
 
 import logo from '../../combined-logos.png';
 import './App.css';
@@ -18,7 +19,8 @@ function App() {
           <MainNav />
           <div className="App-content">
             <Switch>
-              <Route to="*" component={Description} />
+              <Route path="/sql-injection" component={SqlInjection} />
+              <Route component={Description} />
             </Switch>
           </div>
         </main>

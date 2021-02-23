@@ -35,7 +35,7 @@
 @media (min-width: 700px) {
   .App-content {
     margin-top: 0;
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 2rem;
   }
   .App-content > h1:first-child {
     margin-top: 0;
@@ -54,7 +54,7 @@
 
 @media (min-width: 1024px) {
   .App-content {
-    padding: 0 0 0 2rem;
+    padding: 0 0 0 3rem;
   }
   .App-main {
     display: flex;

@@ -45,12 +45,6 @@ const MainNav = () => {
         <dd className="MainNav-list-item-description">
           Get other people's information.
         </dd>
-        <dt className="MainNav-list-item">
-          <NavLink className="MainNav-link" to="/css-injection">CSS Injection</NavLink>
-        </dt>
-        <dd className="MainNav-list-item-description">
-          CSS can still be dangerous!
-        </dd>
       </dl>
       <div className="MainNav-drawer-handle">
         <button className="MainNav-drawer-handle-icon" onClick={toggleShow}>
