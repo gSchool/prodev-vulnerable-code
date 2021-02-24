@@ -4,6 +4,7 @@ import Description from '../Description/Description';
 import MainNav from '../MainNav/MainNav';
 import NoSqlInjection from '../NoSqlInjection/NoSqlInjection';
 import SqlInjection from '../SqlInjection/SqlInjection';
+import Xss from '../Xss/Xss';
 
 import logo from '../../combined-logos.png';
 import './App.css';
@@ -20,6 +21,8 @@ function App() {
           <MainNav />
           <div className="App-content">
             <Switch>
+              <Route path="/reflected-xss" component={Xss} />
+              <Route path="/stored-xss" component={Xss} />
               <Route path="/sql-injection" component={SqlInjection} />
               <Route path="/nosql-injection" component={NoSqlInjection} />
               <Route component={Description} />
